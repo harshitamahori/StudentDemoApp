@@ -1,0 +1,43 @@
+Header As CanvasComponent:
+    onNavigate():
+        ThisProperty:
+            Default: =App.ActiveScreen
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    onBack: =App.ActiveScreen
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Label8 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(102, 113, 166, 1)
+        Height: =62
+        Size: =22
+        Text: ="Student App"
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Image2 As image:
+        Height: =38
+        Image: =person
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =51
+        X: =Parent.Width-Self.Width-10
+        Y: =10
+        ZIndex: =2
+
+    Arrow1 As arrow.backArrow:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =38
+        OnSelect: =Navigate(Header.onBack);
+        Width: =41
+        X: =12
+        Y: =12
+        ZIndex: =3
+

@@ -1,0 +1,60 @@
+HomeScreen As screen:
+    Fill: =RGBA(241, 244, 249, 1)
+
+    Image1 As image:
+        Height: =657
+        Image: =p2
+        Width: =566
+        X: =49
+        Y: =99
+        ZIndex: =1
+
+    Button1 As button:
+        Fill: =RGBA(102, 113, 166, 1)
+        Height: =106
+        OnSelect: |-
+            =Reset(NameInp);
+            Reset(PhoneInp);
+            Reset(EmailInp);
+            Reset(DatePicker1);
+            Reset(Radio1);
+            Reset(ComboBox1);
+            Reset(Slider1);
+            Reset(ListBox2);
+            Reset(Toggle1);
+            
+            
+            Navigate(StudentDetails);
+        Size: =20
+        Text: ="Student Details"
+        Tooltip: ="Navigate to student form"
+        Width: =288
+        X: =813
+        Y: =279
+        ZIndex: =2
+
+    Button2 As button:
+        Fill: =RGBA(102, 113, 166, 1)
+        Height: =99
+        OnSelect: |-
+            =ResetForm(Form1);
+            NewForm(Form1);
+            Navigate(CourseDetails);
+        Size: =20
+        Text: ="Course Details"
+        Tooltip: ="Navigate to course form"
+        Width: =288
+        X: =813
+        Y: =490
+        ZIndex: =3
+
+    Label1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(102, 113, 166, 1)
+        Height: =99
+        Size: =22
+        Text: ="UNIVERSITY PORTAL"
+        Width: =1366
+        ZIndex: =4
+

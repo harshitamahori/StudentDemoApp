@@ -1,0 +1,87 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  head:
+    DefinitionType: CanvasComponent
+    CustomProperties:
+      BackScreen:
+        PropertyKind: Input
+        DisplayName: Back Screen
+        Description: A custom property
+        DataType: Screen
+      BackVisible:
+        PropertyKind: Input
+        DisplayName: Back Visible
+        Description: A custom property
+        DataType: Boolean
+      ScreenName:
+        PropertyKind: Input
+        DisplayName: Screen name
+        Description: A custom property
+        DataType: Text
+    Properties:
+      Height: =768
+      Width: =200
+    Children:
+      - Container2:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            Fill: =RGBA(247, 203, 221, 1)
+            Height: =768
+            LayoutDirection: =LayoutDirection.Vertical
+            X: =40
+          Children:
+            - cancel:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  AlignInContainer: =AlignInContainer.End
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =RGBA(0, 18, 107, 1)
+                  Height: =30
+                  Icon: =Icon.CancelBadge
+                  Width: =30
+            - Image3:
+                Control: Image@2.2.3
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Height: =200
+                  Image: =person
+                  Width: =200
+                  Y: =272
+            - Label10:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  AlignInContainer: =AlignInContainer.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+                  Text: =head.ScreenName
+                  X: =25
+                  Y: =214
+            - Icon5:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =RGBA(0, 18, 107, 1)
+                  Icon: =Icon.BackArrow
+                  OnSelect: =Navigate(head.BackScreen);
+                  Visible: =head.BackVisible
+            - Label11:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Open Sans'
+            - Icon7:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =RGBA(0, 18, 107, 1)
+                  Icon: =Icon.ExpandView

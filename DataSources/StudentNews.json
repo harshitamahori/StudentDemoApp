@@ -1,0 +1,174 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr371_studentnews",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr371_studentnew",
+    "MaxGetRowsCount": 500,
+    "Name": "StudentNews",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr371_admissionnew_StudentID_cr371_studentnew": "AdmissionNews",
+      "cr371_age": "Age",
+      "cr371_dob": "DOB",
+      "cr371_dob2": "DOB2",
+      "cr371_emailid": "EmailID",
+      "cr371_gender": "Gender",
+      "cr371_isavailable": "isAvailable",
+      "cr371_name": "Name",
+      "cr371_phone": "Phone",
+      "cr371_PreferrdCourse": "PreferrdCourse",
+      "cr371_profilepic": "Profile Pic",
+      "cr371_profilepicid": "cr371_ProfilePicId",
+      "cr371_skillrating": "Skill Rating",
+      "cr371_skills": "Skills",
+      "cr371_studentid": "StudentID",
+      "cr371_studentnew_AsyncOperations": "System Jobs",
+      "cr371_studentnew_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr371_studentnew_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr371_studentnew_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr371_studentnew_ProcessSession": "Process Sessions",
+      "cr371_studentnew_SyncErrors": "Sync Errors",
+      "cr371_studentnewid": "StudentNew",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "StudentNews",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "StudentNews (Views)",
+    "Name": "_cr371_studentnew_views",
+    "RelatedEntityName": "StudentNews",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "30cf7c14-7ef0-44fd-b71d-9064da373a88": "Active StudentNews",
+      "3d95cfdd-03d6-43d5-b90f-7e27e4ffbb6a": "StudentNew Advanced Find View",
+      "46338f32-ec27-42bb-aa82-a1644ad8b9b3": "StudentNew Lookup View",
+      "5af361f0-99a1-49c2-9979-4ea6eb2c41e0": "Inactive StudentNews",
+      "67deb0e4-4503-4f9f-8f3c-ea9db6db34c8": "StudentNew Associated View"
+    }
+  },
+  {
+    "DisplayName": "Gender",
+    "Name": "cr371_gender",
+    "OptionSetInfoNameMapping": {
+      "852020000": "Male",
+      "852020001": "Female"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr371_gender",
+        "OptionSetReferenceEntityName": "StudentNews"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr371_gender",
+    "RelatedEntityName": "StudentNews",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "isAvailable (StudentNews)",
+    "Name": "cr371_studentnew_cr371_isavailable",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr371_isavailable",
+        "OptionSetReferenceEntityName": "StudentNews"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "cr371_isavailable",
+    "RelatedEntityName": "StudentNews",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Skills (StudentNews)",
+    "Name": "cr371_studentnew_cr371_skills",
+    "OptionSetInfoNameMapping": {
+      "852020000": "Java",
+      "852020001": "Python",
+      "852020002": "HTML",
+      "852020003": "CSS",
+      "852020004": "React.js",
+      "852020005": "Next.js",
+      "852020006": "Javascript"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr371_skills",
+        "OptionSetReferenceEntityName": "StudentNews"
+      }
+    },
+    "OptionSetTypeKey": "MultiSelectPicklistType",
+    "RelatedColumnInvariantName": "cr371_skills",
+    "RelatedEntityName": "StudentNews",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (StudentNews)",
+    "Name": "cr371_studentnew_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "StudentNews"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "StudentNews",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (StudentNews)",
+    "Name": "cr371_studentnew_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "StudentNews"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "StudentNews",
+    "Type": "OptionSetInfo"
+  }
+]

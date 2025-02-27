@@ -1,0 +1,55 @@
+head As CanvasComponent:
+    BackScreen: =App.ActiveScreen
+    BackVisible: =true
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =768
+    ScreenName: =App.ActiveScreen.Name
+    Width: =200
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container2 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(247, 203, 221, 1)
+        Height: =768
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        X: =40
+        ZIndex: =1
+
+        cancel As icon.CancelBadge:
+            AlignInContainer: =AlignInContainer.End
+            Height: =30
+            Icon: =Icon.CancelBadge
+            Width: =30
+            ZIndex: =1
+
+        Image3 As image:
+            Height: =200
+            Image: =person
+            Width: =200
+            Y: =272
+            ZIndex: =2
+
+        Label10 As label:
+            Align: =Align.Center
+            AlignInContainer: =AlignInContainer.Center
+            Text: =head.ScreenName
+            X: =25
+            Y: =214
+            ZIndex: =3
+
+        Icon5 As icon.BackArrow:
+            Icon: =Icon.BackArrow
+            OnSelect: =Navigate(head.BackScreen);
+            Visible: =head.BackVisible
+            ZIndex: =4
+
+        Label11 As label:
+            Text: ="Text"
+            ZIndex: =5
+
+        Icon7 As icon.ExpandView:
+            Icon: =Icon.ExpandView
+            ZIndex: =6
+

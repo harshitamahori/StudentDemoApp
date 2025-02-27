@@ -1,0 +1,389 @@
+"StudentDetails As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    OnVisible: |
+        =If(CountRows(ComboBoxSample) > 0, true, false)
+
+    RectQuickActionBar1 As rectangle:
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName1 As label:
+        Align: =Align.Center
+        Fill: =RGBA(102, 113, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =88
+        Size: =22
+        Text: ="Student Details "
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Canvas1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar1.Y + RectQuickActionBar1.Height
+        ZIndex: =3
+
+        DataCard1 As dataCard:
+            BorderColor: =Color.WhiteSmoke
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(241, 244, 249, 1)
+            Height: =853
+            Width: =1366
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Name As label:
+                Color: =RGBA(0, 18, 107, 1)
+                Text: ="Name"
+                X: =30
+                Y: =40
+                ZIndex: =1
+
+            Phone As label:
+                Color: =RGBA(0, 18, 107, 1)
+                Text: ="Phone"
+                X: =30
+                Y: =92
+                ZIndex: =2
+
+            Email As label:
+                Color: =RGBA(0, 18, 107, 1)
+                Text: ="Email"
+                X: =30
+                Y: =145
+                ZIndex: =3
+
+            NameInp As text:
+                Default: =
+                HintText: ="Full Name"
+                OnSelect: |+
+                    =
+                    
+                Width: =946
+                X: =320
+                Y: =40
+                ZIndex: =4
+
+            PhoneInp As text:
+                Default: =
+                Format: =TextFormat.Number
+                Height: =42
+                HintText: ="Phone"
+                OnSelect: =
+                Width: =946
+                X: =320
+                Y: =90
+                ZIndex: =6
+
+            EmailInp As text:
+                Default: =
+                HintText: ="Email"
+                OnSelect: =
+                Width: =946
+                X: =320
+                Y: =145
+                ZIndex: =7
+
+            DatePicker1 As datepicker:
+                OnSelect: =
+                X: =320
+                Y: =207
+                ZIndex: =8
+
+            Slider1 As slider:
+                Default: |+
+                    =0
+                    
+                Max: =5
+                OnChange: |
+                    =Set(SliderValueVar,Slider1.Value)
+                OnSelect: |
+                    =
+                X: =320
+                Y: =430
+                ZIndex: =11
+
+            Gen As label:
+                Color: =RGBA(0, 18, 107, 1)
+                Text: ="Gender"
+                X: =30
+                Y: =269
+                ZIndex: =13
+
+            Skills As label:
+                Color: =RGBA(0, 18, 107, 1)
+                Text: ="Skills"
+                X: =30
+                Y: =362
+                ZIndex: =14
+
+            "'Skill Rating' As label":
+                Color: =RGBA(0, 18, 107, 1)
+                Text: ="Skill Rating"
+                X: =30
+                Y: =428
+                ZIndex: =15
+
+            PreferredCourse As label:
+                Color: =RGBA(0, 18, 107, 1)
+                Text: ="Preferred Course"
+                X: =30
+                Y: =499
+                ZIndex: =16
+
+            DOB As label:
+                Color: =RGBA(0, 18, 107, 1)
+                Text: ="DOB"
+                X: =30
+                Y: =207
+                ZIndex: =17
+
+            Label16 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =14
+                Text: ="Are you sure you want to submit the details ?"
+                Width: =571
+                X: =147
+                Y: =669
+                ZIndex: =19
+
+            Submit As button:
+                DisplayMode: |-
+                    =If(
+                        Toggle.Value&&
+                        !IsBlank(NameInp.Text) && 
+                        !IsBlank(PhoneInp.Text) && 
+                        !IsBlank(Radio1.Selected) && 
+                        !IsBlank(Radio1.Selected)&&
+                        CountRows(ComboBox1.SelectedItems)>0 &&
+                        !IsBlank(ListBox2.SelectedText),
+                        DisplayMode.Edit,
+                        DisplayMode.Disabled
+                    )
+                Fill: =RGBA(102, 113, 166, 1)
+                OnSelect: |
+                    =If(
+                        Toggle.Value &&          
+                        !IsBlank(NameInp.Text) &&   
+                        Len(Trim(PhoneInp.Text)) = 10 && 
+                        IsNumeric(PhoneInp.Text) &&   
+                        !IsBlank(EmailInp.Text) &&
+                        !IsBlank(Radio1.Selected)&& 
+                        CountRows(ComboBox1.SelectedItems) > 0 &&
+                        Slider1.Value > 0 && 
+                        !IsBlank(ListBox2.Selected.cr371_coursename),
+                        Patch(
+                            StudentNews,
+                            Defaults(StudentNews),
+                            {
+                                Name: NameInp.Text,
+                                Phone: PhoneInp.Text,
+                                EmailID: EmailInp.Text,
+                                DOB2: DatePicker1.SelectedDate,
+                                Gender: Radio1.Selected.Value,
+                                Skills: ComboBox1.SelectedItems,
+                                'Skill Rating': Slider1.Value,
+                                PreferrdCourse: LookUp(' CourseNews', 'Course Name' = ListBox2.Selected.cr371_coursename),
+                                isAvailable: If(Toggle.Value, 'isAvailable (StudentNews)'.Yes, 'isAvailable (StudentNews)'.No)
+                            }
+                        );
+                        Notify("Details submitted successfully!", NotificationType.Success);
+                    
+                        // Reset the inputs
+                        Reset(NameInp);
+                        Reset(PhoneInp);
+                        Reset(EmailInp);
+                        Reset(DatePicker1);
+                        Reset(Radio1);
+                        Reset(ComboBox1);
+                        Reset(Slider1);
+                        Reset(ListBox2);
+                        Reset(Toggle);
+                    
+                        Navigate(HomeScreen, ScreenTransition.Fade);
+                    ,
+                        Notify("Please complete all required fields and select the checkbox!", NotificationType.Error),
+                    
+                        //Pop-Up
+                        If(
+                            Len(Trim(PhoneInp.Text)) <> 10 || !IsNumeric(PhoneInp.Text),
+                            Navigate(PopUp,ScreenTransition.Fade)
+                        )
+                    )
+                Text: ="Submit"
+                Tooltip: ="Submit the details"
+                X: =1081
+                Y: =779
+                ZIndex: =21
+
+            ComboBox1 As combobox:
+                DisplayFields: =["Value"]
+                Height: =32
+                IsSearchable: =false
+                Items: =Choices('Skills (StudentNews)')
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Skills (StudentNews)',ComboBox1.SearchText)
+                X: =320
+                Y: =366
+                ZIndex: =22
+
+            Preview As button:
+                Fill: =RGBA(102, 113, 166, 1)
+                OnSelect: |
+                    =ClearCollect(
+                        PreviewCollection,
+                        {
+                            Label: "Name",
+                            Value: NameInp.Text
+                        },
+                        {
+                            Label: "Phone",
+                            Value: PhoneInp.Text
+                        },
+                        {
+                            Label: "Email",
+                            Value: EmailInp.Text
+                        },
+                        {
+                            Label: "Date of Birth",
+                            Value: Text(
+                                DatePicker1.SelectedDate,
+                                "[$-en-US]yyyy-mm-dd"
+                            )
+                        },
+                        {
+                            Label: "Gender",
+                            Value: Text(Radio1.Selected.Value)
+                        },
+                        {
+                            Label: "Skills",
+                            Value: Concat(
+                                ComboBox1.SelectedItems,
+                                Value,
+                                ", "
+                            )
+                        },
+                        {
+                            Label: "Preferred Course",
+                            Value: ListBox2.Selected.cr371_coursename
+                        },
+                        {
+                            Label: "Availability",
+                            Value: If(
+                                Toggle.Value,
+                                "Yes",
+                                "No"
+                            )
+                        }
+                    );
+                    Navigate(
+                        PreviewScreen,
+                        ScreenTransition.Fade
+                    );
+                Text: ="Preview"
+                Tooltip: ="Shows preview of the form"
+                X: =841
+                Y: =779
+                ZIndex: =23
+
+            Radio1 As radio:
+                Items: =Choices(StudentNews.Gender)
+                X: =320
+                Y: =256
+                ZIndex: =24
+
+            SliderLabel As label:
+                Text: =Text(SliderValueVar)
+                X: =671
+                Y: =428
+                ZIndex: =25
+
+            NameAsterisk As label:
+                Color: =Color.Red
+                Height: =25
+                Text: ="*"
+                Visible: =If(IsBlank(NameInp.Text),true,false)
+                Width: =51
+                X: =90
+                Y: =47
+                ZIndex: =26
+
+            PhoneAsterisk As label:
+                Color: =Color.Red
+                Text: ="*"
+                Visible: |
+                    =IsBlank(PhoneInp.Text)
+                Width: =51
+                X: =90
+                Y: =92
+                ZIndex: =27
+
+            GenderAsterisk As label:
+                Color: =Color.Red
+                Text: ="*"
+                Visible: =If(IsBlank(Radio1.Selected),true,false)
+                Width: =47
+                X: =94
+                Y: =269
+                ZIndex: =28
+
+            PrefCourseAsterisk As label:
+                Color: =Color.Red
+                Height: =39
+                Text: ="*"
+                Visible: =If(IsBlank(ListBox2.Selected),true,false)
+                Width: =41
+                X: =180
+                Y: =500
+                ZIndex: =29
+
+            SkillsAsterisk As label:
+                Color: =Color.Red
+                Height: =32
+                Text: ="*"
+                Visible: =If(CountRows(ComboBox1.SelectedItems)=0,true,false)
+                Width: =64
+                X: =83
+                Y: =362
+                ZIndex: =30
+
+            Toggle As toggleSwitch:
+                DisplayMode: |-
+                    =If(
+                        !IsBlank(NameInp.Text) && 
+                        !IsBlank(PhoneInp.Text) && 
+                        !IsBlank(Radio1.Selected) && 
+                        !IsBlank(Radio1.Selected)&&
+                        CountRows(ComboBox1.SelectedItems)>0 &&
+                        !IsBlank(ListBox2.SelectedText),
+                        DisplayMode.Edit,
+                        DisplayMode.Disabled
+                    )
+                FalseText: ="No"
+                TrueText: ="Yes"
+                X: =30
+                Y: =678
+                ZIndex: =31
+
+            ListBox2 As listbox:
+                Height: =131
+                Items: =ShowColumns(' CourseNews','Course Name')
+                SelectMultiple: =false
+                Width: =282
+                X: =320
+                Y: =499
+                ZIndex: =32
+
+    Icon1 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(HomeScreen);
+        X: =25
+        Y: =12
+        ZIndex: =5
+

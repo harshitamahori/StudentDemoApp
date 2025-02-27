@@ -1,0 +1,60 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  Header:
+    DefinitionType: CanvasComponent
+    CustomProperties:
+      onBack:
+        PropertyKind: Input
+        DisplayName: onBack
+        Description: A custom property
+        DataType: Screen
+      onNavigate:
+        PropertyKind: Action
+        DisplayName: onNavigate
+        Description: A custom property
+        ReturnType: Void
+    Children:
+      - Label8:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(102, 113, 166, 1)
+            Font: =Font.'Open Sans'
+            Height: =62
+            Size: =22
+            Text: ="Student App"
+            Width: =Parent.Width
+      - Image2:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =38
+            Image: =person
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Width: =51
+            X: =Parent.Width-Self.Width-10
+            Y: =10
+      - Arrow1:
+          Control: Arrow@2.3.0
+          Variant: BackArrow
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =38
+            OnSelect: =Navigate(Header.onBack);
+            Width: =41
+            X: =12
+            Y: =12

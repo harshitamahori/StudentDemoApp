@@ -1,0 +1,39 @@
+Try As screen:
+
+    Toggle1 As toggleSwitch:
+        X: =564
+        Y: =234
+        ZIndex: =1
+
+    Label6 As label:
+        Size: =20
+        Text: ="Toggle ON"
+        Visible: =If(Toggle1.Value=true,true,false)
+        X: =546
+        Y: =350
+        ZIndex: =2
+
+    Label7 As label:
+        Size: =20
+        Text: ="Toggle OFF"
+        Visible: =If(Toggle1.Value = false , true , false )
+        X: =546
+        Y: =405
+        ZIndex: =3
+
+    ListBox1 As listbox:
+        Height: =181
+        Items: =["Marketing","Development","XyZ"]
+        X: =53
+        Y: =336
+        ZIndex: =4
+
+    Button7 As button:
+        OnSelect: =Navigate(HomeScreen);
+        Text: |-
+            ="Navigate
+            "
+        X: =1081
+        Y: =241
+        ZIndex: =5
+

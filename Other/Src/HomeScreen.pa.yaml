@@ -1,0 +1,95 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  HomeScreen:
+    Properties:
+      Fill: =RGBA(241, 244, 249, 1)
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+    Children:
+      - Image1:
+          Control: Image@2.2.3
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Height: =657
+            Image: =p2
+            Width: =566
+            X: =49
+            Y: =99
+      - Button1:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(102, 113, 166, 1)
+            Font: =Font.'Open Sans'
+            Height: =106
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: |-
+              =Reset(NameInp);
+              Reset(PhoneInp);
+              Reset(EmailInp);
+              Reset(DatePicker1);
+              Reset(Radio1);
+              Reset(ComboBox1);
+              Reset(Slider1);
+              Reset(ListBox2);
+              Reset(Toggle1);
+
+
+              Navigate(StudentDetails);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Size: =20
+            Text: ="Student Details"
+            Tooltip: ="Navigate to student form"
+            Width: =288
+            X: =813
+            Y: =279
+      - Button2:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(102, 113, 166, 1)
+            Font: =Font.'Open Sans'
+            Height: =99
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: |-
+              =ResetForm(Form1);
+              NewForm(Form1);
+              Navigate(CourseDetails);
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            Size: =20
+            Text: ="Course Details"
+            Tooltip: ="Navigate to course form"
+            Width: =288
+            X: =813
+            Y: =490
+      - Label1:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(102, 113, 166, 1)
+            Font: =Font.'Open Sans'
+            Height: =99
+            Size: =22
+            Text: ="UNIVERSITY PORTAL"
+            Width: =1366

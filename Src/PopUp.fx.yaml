@@ -1,0 +1,34 @@
+PopUp As screen:
+
+    Rectangle1 As rectangle:
+        Fill: =RGBA(0,0,0,0.5)
+        Height: =767
+        Width: =1363
+        ZIndex: =1
+
+    Container1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =296
+        Visible: |
+            =Len(Trim(PhoneInp.Text)) <> 10 || !IsNumeric(PhoneInp.Text)
+        Width: =712
+        X: =225
+        Y: =235
+        ZIndex: =2
+
+        Label5 As label:
+            Height: =219
+            Size: =22
+            Text: ="Phone Number must be of 10 digits and must only contain numbers "
+            Width: =681
+            X: =15
+            ZIndex: =1
+
+        Button5 As button:
+            Fill: =RGBA(102, 113, 166, 1)
+            OnSelect: =Navigate(StudentDetails)
+            Text: ="OK"
+            X: =507
+            Y: =237
+            ZIndex: =2
+

@@ -1,0 +1,13 @@
+Component As screen:
+
+    Header_1 As Header:
+        Height: =56
+        onBack: =HomeScreen
+        onNavigate: =App.ActiveScreen
+        Width: =1366
+
+    head_1 As head:
+        Height: =653
+        Y: =68
+        ZIndex: =2
+

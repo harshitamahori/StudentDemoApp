@@ -1,0 +1,152 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr371_coursenews",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr371_coursenew",
+    "MaxGetRowsCount": 500,
+    "Name": " CourseNews",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr371_admissionnew_CourseID_cr371_coursenew": "AdmissionNews",
+      "cr371_availability": "Availability",
+      "cr371_category": "Category",
+      "cr371_courseid": "CourseID",
+      "cr371_coursename": "Course Name",
+      "cr371_coursenew_AsyncOperations": "System Jobs",
+      "cr371_coursenew_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr371_coursenew_DuplicateBaseRecord": "Duplicate Records (cr371_coursenew_DuplicateBaseRecord)",
+      "cr371_coursenew_DuplicateMatchingRecord": "Duplicate Records (cr371_coursenew_DuplicateMatchingRecord)",
+      "cr371_coursenew_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr371_coursenew_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr371_coursenew_ProcessSession": "Process Sessions",
+      "cr371_coursenew_SyncErrors": "Sync Errors",
+      "cr371_coursenewid": " CourseNew",
+      "cr371_description": "Description",
+      "cr371_duration": "Duration",
+      "cr371_numberofseats": "NumberOfSeats",
+      "cr371_price": "Price",
+      "cr371_price_base": "Price (Base)",
+      "cr371_schedule": "Schedule",
+      "cr371_studentnew_PreferrdCourse_cr371_coursenew": "StudentNews",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": " CourseNews",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": " CourseNews (Views)",
+    "Name": "_cr371_coursenew_views",
+    "RelatedEntityName": " CourseNews",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "36529cb1-389c-43fa-a221-0a451cfda063": " CourseNew Advanced Find View",
+      "4eb67aef-4364-4297-95f1-78532040b162": " CourseNew Lookup View",
+      "67f0497d-c66a-4ae1-bfcb-2ae6a15733ac": "Active  CourseNews",
+      "92789a81-7396-4eb5-be7e-7b6bbd9a58a5": " CourseNew Associated View",
+      "96a52be2-f9aa-48c9-8d87-7173e6fad971": "Inactive  CourseNews"
+    }
+  },
+  {
+    "DisplayName": "Category ( CourseNews)",
+    "Name": "cr371_coursenew_cr371_category",
+    "OptionSetInfoNameMapping": {
+      "852020000": "Development",
+      "852020001": "Design",
+      "852020002": "Marketing"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr371_category",
+        "OptionSetReferenceEntityName": " CourseNews"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr371_category",
+    "RelatedEntityName": " CourseNews",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Schedule ( CourseNews)",
+    "Name": "cr371_coursenew_cr371_schedule",
+    "OptionSetInfoNameMapping": {
+      "852020000": "Morning",
+      "852020001": "Evening",
+      "852020002": "Weekend"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr371_schedule",
+        "OptionSetReferenceEntityName": " CourseNews"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr371_schedule",
+    "RelatedEntityName": " CourseNews",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status ( CourseNews)",
+    "Name": "cr371_coursenew_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": " CourseNews"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": " CourseNews",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason ( CourseNews)",
+    "Name": "cr371_coursenew_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": " CourseNews"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": " CourseNews",
+    "Type": "OptionSetInfo"
+  }
+]

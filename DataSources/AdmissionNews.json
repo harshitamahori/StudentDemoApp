@@ -1,0 +1,128 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr371_admissionnews",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr371_admissionnew",
+    "MaxGetRowsCount": 500,
+    "Name": "AdmissionNews",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr371_admissiondate": "Admission date",
+      "cr371_admissionid": "AdmissionID",
+      "cr371_admissionnew_AsyncOperations": "System Jobs",
+      "cr371_admissionnew_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr371_admissionnew_DuplicateBaseRecord": "Duplicate Records (cr371_admissionnew_DuplicateBaseRecord)",
+      "cr371_admissionnew_DuplicateMatchingRecord": "Duplicate Records (cr371_admissionnew_DuplicateMatchingRecord)",
+      "cr371_admissionnew_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr371_admissionnew_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr371_admissionnew_ProcessSession": "Process Sessions",
+      "cr371_admissionnew_SyncErrors": "Sync Errors",
+      "cr371_admissionnewid": "AdmissionNew",
+      "cr371_CourseID": "CourseID",
+      "cr371_paidamount": "Paid Amount",
+      "cr371_paidamount_base": "Paid Amount (Base)",
+      "cr371_status": "Status (cr371_status)",
+      "cr371_StudentID": "StudentID",
+      "cr371_totalfee": "Total Fee",
+      "cr371_totalfee_base": "Total Fee (Base)",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status (statecode)",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "AdmissionNews",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "AdmissionNews (Views)",
+    "Name": "_cr371_admissionnew_views",
+    "RelatedEntityName": "AdmissionNews",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2dab7463-45cc-4f6a-a597-de08e6af75cd": "Inactive AdmissionNews",
+      "42702a86-50ff-4c6b-b576-25e57ca11b44": "AdmissionNew Lookup View",
+      "49853914-644b-4155-a0bf-1d7113dd4bf3": "Active AdmissionNews",
+      "7a8ca6b1-4243-4d1f-ac6f-784d274e1e73": "AdmissionNew Associated View",
+      "92794e25-597a-4db9-a8e5-271c1dfb0cb2": "AdmissionNew Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (AdmissionNews)",
+    "Name": "cr371_admissionnew_cr371_status",
+    "OptionSetInfoNameMapping": {
+      "852020000": "Pendig",
+      "852020001": "Enrolled",
+      "852020002": "Completed"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr371_status",
+        "OptionSetReferenceEntityName": "AdmissionNews"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr371_status",
+    "RelatedEntityName": "AdmissionNews",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (AdmissionNews)_1",
+    "Name": "cr371_admissionnew_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "AdmissionNews"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "AdmissionNews",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (AdmissionNews)",
+    "Name": "cr371_admissionnew_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "AdmissionNews"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "AdmissionNews",
+    "Type": "OptionSetInfo"
+  }
+]

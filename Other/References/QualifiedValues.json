@@ -1,0 +1,25 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_cr371_studentnew_forms",
+      "Namespace": "StudentNews (Forms)",
+      "Values": {
+        "Information": "3d52049e-3f3c-43f1-b4fb-7cfc9f758db2"
+      }
+    },
+    {
+      "Kind": "default.cds_cr371_coursenew_forms",
+      "Namespace": " CourseNews (Forms)",
+      "Values": {
+        "Information": "c11b3066-8570-47b1-9f82-bb566459087f"
+      }
+    },
+    {
+      "Kind": "default.cds_cr371_admissionnew_forms",
+      "Namespace": "AdmissionNews (Forms)",
+      "Values": {
+        "Information": "6a5d7239-a55e-41b2-b75c-becf91264325"
+      }
+    }
+  ]
+}

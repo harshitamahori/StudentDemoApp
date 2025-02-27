@@ -1,0 +1,6 @@
+test As screen:
+
+    head_2 As head:
+        BackScreen: =StudentDetails
+        BackVisible: =false
+
