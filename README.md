@@ -1,4 +1,3 @@
-
 # VITAS Mobile Referral Application
 
 A modernized mobile platform enabling healthcare professionals to efficiently refer hospice-eligible patients with integrated clinical tools and location-based services.
@@ -7,7 +6,7 @@ A modernized mobile platform enabling healthcare professionals to efficiently re
 
 - [📦 Prerequisites](#Prerequisites)
 - [🏃‍♀️ How to Run (Developers)](#How-to-Run-the-App-For-Developers)
-- [🚀 How to Build (Production)](#How-to-Build-production)
+- [🚀 How to Build (Production)](#How-to-create-a-Build-development)
 - [🧪 Testing Guide (QA)](#Testing-Guide-QA)
 
 ## Prerequisites
@@ -30,7 +29,9 @@ npm install
 yarn install
 ```
 
-## How to Build (Production)
+## How to create a Build (Development)
+
+### For Android Builds
 
 ### 1. Install Required Tools
 ```bash
