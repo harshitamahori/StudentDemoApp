@@ -6,7 +6,7 @@ A modernized mobile platform enabling healthcare professionals to efficiently re
 
 - [📦 Prerequisites](#Prerequisites)
 - [🏃‍♀️ How to Run (Developers)](#How-to-Run-the-App-For-Developers)
-- [🚀 How to Build (Production)](#How-to-create-a-Build-development)
+- [🚀 How to create a Build (Development)](#How-to-create-a-Build-development)
 - [🧪 Testing Guide (QA)](#Testing-Guide-QA)
 
 ## Prerequisites
