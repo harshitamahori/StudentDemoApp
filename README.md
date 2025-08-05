@@ -1,6 +1,6 @@
 # VITAS Mobile Referral Application
 
-This application enables healthcare professionals to efficiently refer hospice-eligible patients with integrated clinical tools and location-based services.
+A modernized mobile platform enabling healthcare professionals to efficiently refer hospice-eligible patients with integrated clinical tools and location-based services.
 
 ## 📚 Table of Contents
 
@@ -35,7 +35,7 @@ This section explains how to generate **custom development builds** for Android 
 
 ### 📦 1. Common Setup
 
-# Install Required Tools
+#### Install Required Tools
 ```bash
 # Install expo-dev-client
 npx expo install expo-dev-client
@@ -43,33 +43,33 @@ npx expo install expo-dev-client
 # Install EAS CLI globally
 npm install -g eas-cli
 ```
-# Login to Expo
+#### Login to Expo
 
 ```bash
 eas login
 ```
 
-# Configure EAS Build
+#### Configure EAS Build
 
 ```bash
 eas build:configure
 ```
 
-### Android Development Build
+### 2. Android Development Build
 
 ``` bash
 eas build --platform android --profile development
 ```
 
-### 🍏 iOS Development Build
+### 3. iOS Development Build
 
-# Register your iOS device
+#### Register your iOS device
 
 ```bash
 eas device:create
 ```
 
-# Run the build
+#### Run the build
 
 ```bash
 eas build --platform ios --profile development
