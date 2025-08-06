@@ -56,9 +56,9 @@ This will open Expo Developer Tools in your browser.
 3. The app will open and reload automatically with your latest code.
 
 #### Option 2: Using Emulator/Simulator
-1.Press a to open the Android emulator (if installed).
-2.Press i to open the iOS simulator (macOS only, requires Xcode).
-3.Press w to run on Web (optional).
+1. Press a to open the Android emulator (if installed).
+2. Press i to open the iOS simulator (macOS only, requires Xcode).
+3. Press w to run on Web (optional).
 
 ## How to create a Build (Development)
 
