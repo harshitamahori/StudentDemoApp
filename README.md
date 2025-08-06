@@ -1,6 +1,6 @@
 # VITAS Mobile Referral Application
 
-A modernized mobile platform enabling healthcare professionals to efficiently refer hospice-eligible patients with integrated clinical tools and location-based services.
+VITAS Mobile Referral Application enables healthcare professionals to efficiently refer hospice-eligible patients with integrated clinical tools and location-based services.
 
 ## 📚 Table of Contents
 
@@ -13,21 +13,52 @@ A modernized mobile platform enabling healthcare professionals to efficiently re
 
 Make sure the following tools are installed:
 
-- Node.js
-- Expo CLI
+- Node.js >= 16.x
+- Expo CLI 
 - Expo Go app (for device testing)
 
 ## How to Run the App (For Developers)
 
 This guide is for developers working on the app locally.
 
-### 1. Install Dependencies
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-org/vitas-mobile-referral.git
+```
+
+### 2. Install Dependencies
 
 ```bash
 npm install
 # or
 yarn install
 ```
+
+### 3. Install Expo CLI (if not already)
+
+```bash
+npm install -g expo-cli
+```
+
+### 4. Start the Development Server
+```bash
+npx expo start
+```
+
+This will open Expo Developer Tools in your browser.
+
+### 📱 Run the App on Your Device
+
+#### Option 1: Using Expo Go (iOS/Android)
+1. Install the **Expo Go** app from the App Store or Play Store.
+2. Scan the QR code shown in your terminal using Expo Go Scanner.
+3. The app will open and reload automatically with your latest code.
+
+#### Option 2: Using Emulator/Simulator
+1.Press a to open the Android emulator (if installed).
+2.Press i to open the iOS simulator (macOS only, requires Xcode).
+3.Press w to run on Web (optional).
 
 ## How to create a Build (Development)
 
