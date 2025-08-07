@@ -5,7 +5,7 @@ VITAS Mobile Application is a versatile healthcare app designed to streamline ho
 ## 📚 Table of Contents
 
 - [📦 Prerequisites](#Prerequisites)
-- [🏃‍♀️ How to Run (Developers)](#How-to-Run-the-App-For-Developers)
+- [🏃‍♀️ How to Run the App (Developers)](#How-to-Run-the-App-For-Developers)
 - [🚀 How to create a Build (Development)](#How-to-create-a-Build-development)
 
 
