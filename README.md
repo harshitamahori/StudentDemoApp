@@ -1,6 +1,6 @@
 # VITAS Mobile Application
 
-VITAS Mobile Application is a versatile healthcare app designed to streamline hospice and palliative care workflows. It offers tools for clinical support, referral management, educational resources, and secure access. Features adapt based on user location and login type.
+VITAS Mobile Application is a versatile healthcare app designed to streamline hospice and palliative care workflows. It offers tools for clinical support, referral management, educational resources, and secure access.
 
 ## 📚 Table of Contents
 
