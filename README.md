@@ -1,13 +1,13 @@
-# VITAS Mobile Referral Application
+# VITAS Mobile Application
 
-VITAS Mobile Referral Application enables healthcare professionals to efficiently refer hospice-eligible patients with integrated clinical tools and location-based services.
+VITAS Mobile Application is a versatile healthcare app designed to streamline hospice and palliative care workflows. It offers tools for clinical support, referral management, educational resources, and secure access. Features adapt based on user location and login type.
 
 ## 📚 Table of Contents
 
 - [📦 Prerequisites](#Prerequisites)
 - [🏃‍♀️ How to Run (Developers)](#How-to-Run-the-App-For-Developers)
 - [🚀 How to create a Build (Development)](#How-to-create-a-Build-development)
-- [🧪 Testing Guide (QA)](#Testing-Guide-QA)
+
 
 ## Prerequisites
 
@@ -105,26 +105,4 @@ eas device:create
 ```bash
 eas build --platform ios --profile development
 ```
-
-## Testing Guide (QA)
-
-This section is for testers to install and test the production build.
-
-### For Android Testing (via APK)
-
-1. Tap the link shared with you to download the .apk file.
-2. Enable installation from unknown sources in device settings.
-3. Open the downloaded file and tap Install.
-4. Launch the app and begin testing.
-
-### For iOS Testing (via TestFlight)
-
-1. **Install the TestFlight app** from the App Store (if not already installed).
-2. **Accept the invite**:
-   - You'll receive an email or public link → Tap **View in TestFlight**.
-3. **Install the app**:
-   - New testers: Tap **Accept** → **Install**
-   - Existing testers: Tap **Update** or **Open**
-4. **Open the app** and begin testing.
-5. You can **submit feedback directly from TestFlight**.
 
