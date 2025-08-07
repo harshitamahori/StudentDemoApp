@@ -24,7 +24,7 @@ This guide is for developers working on the app locally.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-org/vitas-mobile-referral.git
+git clone https://github.com/your-org/project-name.git
 ```
 
 ### 2. Install Dependencies
