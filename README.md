@@ -4,9 +4,9 @@ VITAS Mobile Application is a versatile healthcare app designed to streamline ho
 
 ## 📚 Table of Contents
 
-- [📦 Prerequisites](#Prerequisites)
-- [🏃‍♀️ How to Run the App (Developers)](#How-to-Run-the-App-For-Developers)
-- [🚀 How to create a Build (Development)](#How-to-create-a-Build-development)
+- [Prerequisites](#Prerequisites)
+- [How to Run the App (Developers)](#How-to-Run-the-App-For-Developers)
+- [How to create a Build (Development)](#How-to-create-a-Build-development)
 
 
 ## Prerequisites
@@ -48,7 +48,7 @@ npx expo start
 
 This will open Expo Developer Tools in your browser.
 
-### 📱 Run the App on Your Device
+### Run the App on Your Device
 
 #### Option 1: Using Expo Go (iOS/Android)
 1. Install the **Expo Go** app from the App Store or Play Store.
@@ -64,7 +64,7 @@ This will open Expo Developer Tools in your browser.
 
 This section explains how to generate **custom development builds** for Android and iOS using EAS Build.
 
-### 📦 1. Common Setup
+###  1. Common Setup
 
 #### Install Required Tools
 ```bash
