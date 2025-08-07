@@ -5,7 +5,7 @@ VITAS Mobile Application is a versatile healthcare app designed to streamline ho
 ## 📚 Table of Contents
 
 - [📦 Prerequisites](#Prerequisites)
-- [🏃‍♀️ How to Run the App (Developers)](#How-to-Run-the-App-For-Developers)
+- [🏃‍♀️ How to Run (Developers)](#How-to-Run-the-App-For-Developers)
 - [🚀 How to create a Build (Development)](#How-to-create-a-Build-development)
 
 
@@ -13,9 +13,9 @@ VITAS Mobile Application is a versatile healthcare app designed to streamline ho
 
 Make sure the following tools are installed:
 
-- Node.js >= 16.x
-- Expo CLI 
-- Expo Go app (for device testing)
+- Node.js (v22.18.0)
+- Expo CLI – use the latest via **npx expo** (no global install needed) 
+- Expo Go app (Latest from App Store/Play Store)
 
 ## How to Run the App (For Developers)
 
