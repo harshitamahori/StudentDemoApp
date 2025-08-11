@@ -1,6 +1,6 @@
-# VITAS Mobile Application
+# VITAS Mobile Referral Application
 
-VITAS Mobile Application is a versatile healthcare app designed to streamline hospice and palliative care workflows. It offers tools for clinical support, referral management, educational resources, and secure access.
+VITAS Mobile Referral Application is a versatile healthcare app designed to streamline hospice and palliative care workflows. It offers tools for clinical support, referral management, educational resources, and secure access.
 
 ##  Table of Contents
 
